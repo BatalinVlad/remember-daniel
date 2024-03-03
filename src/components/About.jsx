@@ -4,12 +4,12 @@ const About = () => {
   return (
     <section className="about">
       <div className="flex row-rev" style={{ margin: "50px 0px" }}>
-        <div className="about-image">
+        {/* <div className="about-image">
           <img
             src="https://res.cloudinary.com/dzeycmkct/image/upload/c_crop,w_1000,h_1000,ar_1:1/v1706546156/WhatsApp_Image_2024-01-29_at_16.09.51_k9xgkn.jpg"
             alt="Soldier Image 4"
           />
-        </div>
+        </div> */}
 
         <div className="description flex column">
           <h2 className="bold">לזכר דניאל ז"ל גיבור ישראל</h2>
@@ -32,7 +32,7 @@ const About = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="images-container">
+      <div className="images-container flex justify-center wrap">
         <div className="image">
           <img
             src="https://res.cloudinary.com/dzeycmkct/image/upload/v1706546156/WhatsApp_Image_2024-01-29_at_16.09.50_1_z9bspi.jpg"
