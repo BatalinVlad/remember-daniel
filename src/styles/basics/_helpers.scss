@@ -1,0 +1,338 @@
+.screen {
+  background-color: rgba(0, 0, 0, 0.534);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.darker-screen{
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.loading_screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+// Margin
+.mt-4 {
+  margin-top: 4px;
+}
+
+//Font
+
+.fs12 {
+  font-size: 12px;
+}
+
+.fs14 {
+  font-size: 14px;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+.fs20 {
+  font-size: 20px;
+}
+
+.fs24 {
+  font-size: 24px;
+}
+
+.fs28 {
+  font-size: 28px;
+}
+
+.fs30 {
+  font-size: 30px;
+}
+
+// flex helpers
+
+.flex {
+  display: flex;
+
+  > *.full {
+    flex: 1;
+  }
+
+  &.row-rev {
+    flex-direction: row-reverse;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.justify-evenly {
+    justify-content: space-evenly;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.align-start {
+    align-items: flex-start;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.grow {
+    flex-grow: 1;
+  }
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+//text helpers
+
+.text-center {
+  text-align: center;
+}
+
+.text-decoration {
+  text-decoration: line-through;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.clean-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+// pointer helper
+
+.pointer {
+  cursor: pointer;
+}
+
+//grid helpers
+
+.grid-item {
+  display: grid;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+//size helpers
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.fill-width {
+  width: 100%;
+}
+
+.fill-height {
+  height: 100%;
+}
+
+//colors
+
+.label-color-1 {
+  background-color: rgb(3, 187, 12);
+}
+
+.label-color-2 {
+  background-color: rgb(255, 175, 70);
+}
+
+.label-color-3 {
+  background-color: rgb(199, 23, 23);
+}
+
+.label-color-4 {
+  background-color: rgb(97, 94, 255);
+}
+
+.label-color-5 {
+  background-color: rgb(230, 54, 230);
+}
+
+.label-color-6 {
+  background-color: rgb(0, 247, 255);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// positions
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.z3 {
+  z-index: 3;
+}
+
+.z4 {
+  z-index: 4;
+}
+
+.dark {
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  background-color: rgba(0, 0, 0, 0.685);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.827);
+  }
+}
+
+.light {
+  text-shadow: 0px 0px 5px white;
+  color: black;
+  background-color: #ffffffdc;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+}
+
+// colors for tasks
+
+.bgTaskWhite {
+  background: rgb(255, 255, 255);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.527);
+  }
+}
+
+.bgTaskGreen {
+  background: #1d976c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93f9b9, #1d976c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93f9b9, #1d976c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bgTaskYellow {
+  background: #fffc00;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fffd8a, #fffc00);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fffd8a, #fffc00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bgTaskOrange {
+  transition: all 0.3s;
+  background: #ff8008;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffc837, #ff8008);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffc837, #ff8008);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bgTaskRed {
+  background: #eb3349;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f45c43, #eb3349);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff7760, #ff2e47);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bgTaskBlue {
+  background: #1fa2ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a6ffcb, #12d8fa, #1fa2ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a6ffcb, #12d8fa, #1fa2ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+//IMAGES
+
+.obj-cover {
+  object-fit: cover;
+}
+
+.obj-contain {
+  object-fit: contain;
+}
