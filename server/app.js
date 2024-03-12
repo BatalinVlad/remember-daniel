@@ -5,6 +5,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const lettersRoute = require('./routes/letters-routes');
+const usersRoute = require('./routes/users-routes');
 
 const HttpError = require('./models/http-error');
 
@@ -17,6 +18,7 @@ app.use(cors({
 }));
 
 app.use('/api/letters', lettersRoute);
+app.use('/api/users', usersRoute);
 
 app.use((req, res, next) => {
   const error = new HttpError('Could not find this route.', 404);

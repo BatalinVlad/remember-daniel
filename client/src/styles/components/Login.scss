@@ -1,0 +1,41 @@
+.login-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(235, 114, 0, 0.2);
+    padding: 4px 10px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-drawer {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 200px;
+    height: 100%;
+    transition: right 0.5s ease;
+
+    &.open {
+        right: 0;
+    }
+
+    .content {
+        margin-top: 30px;
+        padding: 15px;
+
+        .action-btn {
+            width: 60%;
+            padding: 5px;
+        }
+    }
+
+    input {
+        width: 100%;
+    }
+
+
+}
