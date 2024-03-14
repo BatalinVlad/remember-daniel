@@ -52,10 +52,18 @@
     width: 250px;
     object-fit: cover;
     transition: all 0.5s;
+
+    @media (max-width: 500px) {
+      width: 100vw;
+    }
   }
 
   .image img:hover {
     width: 280px;
     height: 320px;
+    @media (max-width: 500px) {
+      width: 100vw;
+      height: 300px;
+    }
   }
 }

@@ -10,7 +10,7 @@ function ApproveLettersModal({
     e.stopPropagation();
     try {
       const response = await fetch(
-        `http://localhost:3001/api/letters/${letterData.id}`,
+        `https://remember-daniel-production.up.railway.app/api/letters/${letterData.id}`,
         {
           method: "PUT",
           headers: {
