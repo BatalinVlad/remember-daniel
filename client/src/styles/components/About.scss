@@ -7,7 +7,7 @@
     img {
       border-radius: 50px;
       width: 200px;
-      transition: all .3s;
+      transition: all 0.3s;
     }
   }
 
@@ -37,6 +37,9 @@
       font-weight: bold;
       line-height: 1.4;
     }
+    @media (max-width: 500px) {
+      text-align: center;
+    }
   }
 
   .image {
@@ -48,13 +51,11 @@
     height: 300px;
     width: 250px;
     object-fit: cover;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   .image img:hover {
     width: 280px;
     height: 320px;
-
   }
-
 }
