@@ -10,6 +10,7 @@
   flex-direction: column;
 
   @media (max-width: 500px) {
+    min-width: auto;
     width: 80%;
   }
 
