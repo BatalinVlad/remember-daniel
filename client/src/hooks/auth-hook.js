@@ -15,7 +15,6 @@ export const useAuth = () => {
         localStorage.setItem('userData',
             JSON.stringify({
                 userName: uname,
-                userRole: urole,
                 token: token,
                 expiration: tokenExpirationDate.toISOString()
             }));
@@ -40,7 +39,7 @@ export const useAuth = () => {
     useEffect(() => {
         const storedData = JSON.parse(localStorage.getItem('userData'));
         if (storedData && storedData.token && new Date(storedData.expiration) > new Date()) {
-            login(storedData.userId,
+            login(
                 storedData.userName,
                 storedData.token,
                 new Date(storedData.expiration));

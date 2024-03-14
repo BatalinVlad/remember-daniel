@@ -1,21 +1,58 @@
 .action-btn {
-    width: 200px;
-    z-index: 1;
-    color: white;
-    background: #1d941ddb;
-    box-shadow: rgba(255, 255, 255, 0.185);
-    transition: 0.4s;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+  width: 200px;
+  z-index: 1;
+  color: white;
+  background: #1d941ddb;
+  box-shadow: rgba(255, 255, 255, 0.185);
+  transition: 0.4s;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
 
-    p {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    &:hover {
-      background: #1d941d;
-      box-shadow: 0px 0px 10px 1px rgba(76, 76, 76, 0.431);
-    }
+  p {
+    font-size: 1.1rem;
+    font-weight: 600;
   }
+
+  &:hover {
+    background: #1d941d;
+    box-shadow: 0px 0px 10px 1px rgba(76, 76, 76, 0.431);
+  }
+}
+
+.danger-btn {
+  background-color: #dc3545; /* Red background color */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  padding: 8px 16px; /* Add padding */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c82333;
+  }
+  
+  &:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 1px #ffffff5b, 0 0 0 1px rgba(220, 53, 70, 0.5); /* Add custom focus style */
+  }
+}
+
+.update-btn {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  padding: 8px 16px; /* Add padding */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+  &:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  &:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 1px #ffffff61, 0 0 0 1px hsla(211, 100%, 50%, 0.5); /* Add custom focus style */
+  }
+}

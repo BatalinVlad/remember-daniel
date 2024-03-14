@@ -1,10 +1,10 @@
-const { validationResult } = require('express-validator');
+// const { validationResult } = require('express-validator');
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const cloudinary = require('../utils/cloudinary');
-const getDataUri = require('../utils/datauri');
+// const cloudinary = require('../utils/cloudinary');
+// const getDataUri = require('../utils/datauri');
 
 const HttpError = require('../models/http-error');
 const User = require('../models/user');
@@ -25,7 +25,7 @@ const getUserById = async (req, res, next) => {
     return next(error)
   }
 
-  res.json(user.toObject({ getters: true })); // => { user } => { user: user }
+  res.json(user.toObject({ getters: true }));
 };
 
 const getUsers = async (req, res, next) => {

@@ -1,0 +1,32 @@
+.approve-letters-modal {
+  &.wrapper {
+    background-color: rgba(0, 0, 0, 0.534);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 20px;
+    background: #00000096;
+    border-radius: 10px;
+    box-shadow: 0px 3px 32px -13px black;
+
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    .written {
+      margin-top: 10px;
+      padding: 0;
+    }
+
+    .update-btn {
+      top: 3px;
+      left: 3px;
+    }
+  }
+}

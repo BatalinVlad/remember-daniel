@@ -10,7 +10,7 @@ const Home = () => {
       <Login />
       <div className="HomePage">
         <Navigator />
-        <div className="flex column"> 
+        <div className="flex column">
           <About />
           <NotesSection />
         </div>

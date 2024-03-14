@@ -1,21 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { dummyData } from "../../db.js";
+import React, { useState, useEffect, useContext } from "react";
+import ApproveLettersModal from "../components/ApproveLettersModal.jsx";
+import { AuthContext } from "../context/auth-context.js";
 
 const NotesSection = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [note, setNote] = useState("");
-  const [submittedNotes, setSubmittedNotes] = useState(dummyData);
+  const [submittedNotes, setSubmittedNotes] = useState([]);
+  const [notApprovedLetters, setNotApprovedLetters] = useState([]);
+  const [showAprrovedModal, setShowAprrovedModal] = useState(false);
+  const auth = useContext(AuthContext);
 
   useEffect(() => {
     const fetchLettersData = async () => {
       try {
         const response = await fetch("http://localhost:3001/api/letters");
         const responseData = await response.json();
-        const approvedData = responseData.loadedLetters.filter((letter) => {
-          return letter.isApproved;
+
+        const approvedLettersData = [];
+        const notApprovedLettersData = [];
+
+        responseData.loadedLetters.forEach((letter) => {
+          if (letter.isApproved) {
+            approvedLettersData.push(letter);
+          } else {
+            notApprovedLettersData.push(letter);
+          }
         });
-        setSubmittedNotes([...dummyData, ...approvedData]);
+
+        setNotApprovedLetters(notApprovedLettersData);
+        setSubmittedNotes([...approvedLettersData]);
       } catch (err) {
         console.log(err);
       }
@@ -58,6 +72,9 @@ const NotesSection = () => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
+
+        const responseData = await response.json();
+        setNotApprovedLetters([...notApprovedLetters, responseData.letter]);
       } catch (error) {
         console.error("There was a problem with the fetch operation:", error);
       }
@@ -68,8 +85,51 @@ const NotesSection = () => {
     }
   };
 
+  const deleteLetterHandler = async (lid) => {
+    try {
+      const response = await fetch(`http://localhost:3001/api/letters/${lid}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const updatedLetters = submittedNotes.filter((letter) => {
+        return letter.id !== lid;
+      });
+
+      setSubmittedNotes(updatedLetters);
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+    }
+  };
+
   return (
     <section id="notes" className="notes-section">
+      {auth.isLoggedIn && notApprovedLetters.length > 0 && (
+        <button
+          className="danger-btn z4"
+          onClick={() => setShowAprrovedModal((prev) => !prev)}
+        >
+          <h3>
+            <small> {notApprovedLetters.length} </small>
+            ממתינים לאישור
+          </h3>
+        </button>
+      )}
+      {showAprrovedModal && (
+        <ApproveLettersModal
+          setShowAprrovedModal={setShowAprrovedModal}
+          notApprovedLetters={notApprovedLetters}
+          setNotApprovedLetters={setNotApprovedLetters}
+          setSubmittedNotes={setSubmittedNotes}
+        />
+      )}
+
       <h2 className="text-center">השאר מכתב</h2>
       <input
         type="text"
@@ -102,13 +162,21 @@ const NotesSection = () => {
       <div className="written flex column">
         <h2 className="text-center">רשמו עלי</h2>
         <ul className="flex justify-center wrap">
-          {submittedNotes.map((submittedData, index) => (
-            <li className="note-container" key={index}>
+          {submittedNotes.map((letter, index) => (
+            <li className="note-container relative" key={index}>
               <div className="flex">
-                <h3 style={{ marginLeft: "5px" }}>{submittedData.firstName}</h3>
-                <h3>{submittedData.lastName}</h3>
+                <h3 style={{ marginLeft: "5px" }}>{letter.firstName}</h3>
+                <h3>{letter.lastName}</h3>
               </div>
-              <p>{submittedData.letter}</p>
+              <p>{letter.letter}</p>
+              {auth.isLoggedIn && (
+                <button
+                  className="danger-btn delete"
+                  onClick={() => deleteLetterHandler(letter.id)}
+                >
+                  למחוק
+                </button>
+              )}
             </li>
           ))}
         </ul>

@@ -25,4 +25,8 @@ router.post('/create/',
     ],
     lettersController.createLetter);
 
+router.put('/:lid', lettersController.updateLetter)
+
+router.delete('/:lid', lettersController.deleteLetter)
+
 module.exports = router;
