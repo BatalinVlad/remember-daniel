@@ -14,7 +14,7 @@ const NotesSection = () => {
   useEffect(() => {
     const fetchLettersData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/letters");
+        const response = await fetch("https://remember-daniel-production.up.railway.app/api/letters");
         const responseData = await response.json();
 
         const approvedLettersData = [];
@@ -55,7 +55,7 @@ const NotesSection = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:3001/api/letters/create",
+          "https://remember-daniel-production.up.railway.app/api/letters/create",
           {
             method: "POST",
             headers: {
@@ -87,7 +87,7 @@ const NotesSection = () => {
 
   const deleteLetterHandler = async (lid) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/letters/${lid}`, {
+      const response = await fetch(`https://remember-daniel-production.up.railway.app/api/letters/${lid}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
