@@ -63,7 +63,7 @@ const About = () => {
             alt="Soldier Image 3"
             onClick={() =>
               viewImageHandler(
-                "https://res.cloudinary.com/dzeycmkct/image/upload/v1706546156/WhatsApp_Image_2024-01-29_at_16.09.50_1_z9bspi.jpg"
+                "https://res.cloudinary.com/dzeycmkct/image/upload/v1706546155/WhatsApp_Image_2024-01-29_at_16.09.53_dkn0ao.jpg"
               )
             }
           />
