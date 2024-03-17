@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "./pages/Home";
-
 import { AuthContext } from "./context/auth-context";
 import { useAuth } from "./hooks/auth-hook";
 
