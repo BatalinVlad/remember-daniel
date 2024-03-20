@@ -52,11 +52,11 @@ function Login() {
     <React.Fragment>
       {showDrawer && <div className="screen" onClick={toggleDrawer}></div>}
       {!showDrawer && (
-        <button className="login-btn z3" onClick={toggleDrawer}>
+        <button className="login-btn z4" onClick={toggleDrawer}>
           <h3>{auth.isLoggedIn ? "יציאה" : "הכנס"}</h3>
         </button>
       )}
-      <div className={showDrawer ? "login-drawer open z4" : "login-drawer"}>
+      <div className={showDrawer ? "login-drawer open z5" : "login-drawer"}>
         <div className="flex column align-center content">
           <input
             type="text"

@@ -11,6 +11,8 @@ const About = () => {
 
   return (
     <section className="about z2">
+      {viewImage && <ImagePreview url={imgUrl} setViewImage={setViewImage} />}
+
       <div className="flex row-rev" style={{ margin: "50px 0px" }}>
         <div className="description flex column">
           <h2 className="bold">לזכר דניאל ז"ל גיבור ישראל</h2>
@@ -34,7 +36,6 @@ const About = () => {
       </video>
 
       <div className="images-container flex justify-center wrap">
-        {viewImage && <ImagePreview url={imgUrl} setViewImage={setViewImage}/>}
         <div className="image">
           <img
             src="https://res.cloudinary.com/dzeycmkct/image/upload/v1706546156/WhatsApp_Image_2024-01-29_at_16.09.50_1_z9bspi.jpg"
