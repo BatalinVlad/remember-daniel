@@ -52,7 +52,7 @@ function Login() {
     <React.Fragment>
       {showDrawer && <div className="screen" onClick={toggleDrawer}></div>}
       {!showDrawer && (
-        <button className="login-btn" onClick={toggleDrawer}>
+        <button className="login-btn z3" onClick={toggleDrawer}>
           <h3>{auth.isLoggedIn ? "יציאה" : "הכנס"}</h3>
         </button>
       )}
