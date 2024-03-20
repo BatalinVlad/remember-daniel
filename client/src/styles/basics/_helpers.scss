@@ -7,7 +7,7 @@
   left: 0;
 }
 
-.darker-screen{
+.darker-screen {
   background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
   width: 100%;
@@ -235,6 +235,10 @@
   position: relative;
 }
 
+.initial {
+  position: initial;
+}
+
 .absolute {
   position: absolute;
 }
@@ -253,6 +257,10 @@
 
 .z4 {
   z-index: 4;
+}
+
+.z5 {
+  z-index: 5;
 }
 
 .dark {

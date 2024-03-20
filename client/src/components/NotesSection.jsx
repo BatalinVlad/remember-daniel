@@ -109,7 +109,7 @@ const NotesSection = () => {
   };
 
   return (
-    <section id="notes" className="notes-section">
+    <section id="notes" className="notes-section z2">
       {auth.isLoggedIn && notApprovedLetters.length > 0 && (
         <button
           className="danger-btn z4"
@@ -127,6 +127,7 @@ const NotesSection = () => {
           notApprovedLetters={notApprovedLetters}
           setNotApprovedLetters={setNotApprovedLetters}
           setSubmittedNotes={setSubmittedNotes}
+          deleteLetterHandler={deleteLetterHandler}
         />
       )}
 

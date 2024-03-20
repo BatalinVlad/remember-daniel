@@ -5,7 +5,9 @@ function ApproveLettersModal({
   setNotApprovedLetters,
   setShowAprrovedModal,
   setSubmittedNotes,
+  deleteLetterHandler,
 }) {
+  console.log(notApprovedLetters);
   const approveHandler = async (e, letterData) => {
     e.stopPropagation();
     try {
@@ -33,21 +35,26 @@ function ApproveLettersModal({
       console.error("There was a problem with the fetch operation:", error);
     }
 
+    updateNotApprovedLetters(letterData.id);
+  };
+
+  const updateNotApprovedLetters = (letterId) => {
     const updatedNotApprovedLetters = notApprovedLetters.filter((letter) => {
-      return letter.id !== letterData.id;
+      return letter.id !== letterId;
     });
     setNotApprovedLetters(updatedNotApprovedLetters);
     if (updatedNotApprovedLetters.length === 0) {
       setShowAprrovedModal(false);
     }
   };
+
   return (
     <>
       <div
-        className="approve-letters-modal wrapper flex center"
+        className="approve-letters-modal wrapper z4 flex center"
         onClick={() => setShowAprrovedModal(false)}
       >
-        <div className="container flex column align-center">
+        <div className="container flex column align-center z5">
           <h1>ממתינים לאישור..</h1>
           <div className="written flex column">
             <ul>
@@ -64,12 +71,24 @@ function ApproveLettersModal({
                       <p>{letterData.letter}</p>
                     </div>
                   </div>
-                  <button
-                    className="update-btn absolute"
-                    onClick={(e) => approveHandler(e, letterData)}
-                  >
-                    אישור
-                  </button>
+                  <div className="actions-btns absolute">
+                    <button
+                      className="update-btn"
+                      onClick={(e) => approveHandler(e, letterData)}
+                    >
+                      אישור
+                    </button>
+                    <button
+                      className="danger-btn initial"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        deleteLetterHandler(letterData.id);
+                        updateNotApprovedLetters(letterData.id);
+                      }}
+                    >
+                      סירוב
+                    </button>
+                  </div>
                 </li>
               ))}
             </ul>

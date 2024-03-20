@@ -24,9 +24,13 @@
       padding: 0;
     }
 
-    .update-btn {
+    .actions-btns {
       top: 3px;
       left: 3px;
+      .danger-btn {
+        position: initial;
+        margin-right: 3px;
+      }
     }
   }
 }
