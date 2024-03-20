@@ -10,7 +10,7 @@ const About = () => {
   };
 
   return (
-    <section className="about z2">
+    <section className="about">
       {viewImage && <ImagePreview url={imgUrl} setViewImage={setViewImage} />}
 
       <div className="flex row-rev" style={{ margin: "50px 0px" }}>
