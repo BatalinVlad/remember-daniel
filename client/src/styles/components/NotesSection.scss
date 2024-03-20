@@ -33,7 +33,6 @@
       background-color: #f9f9f9; /* Light background color */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease-in-out;
-
       &:hover {
         transform: translateY(-5px); /* Lift the note on hover */
       }

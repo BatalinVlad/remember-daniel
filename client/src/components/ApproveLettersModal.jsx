@@ -56,7 +56,7 @@ function ApproveLettersModal({
       >
         <div className="container flex column align-center z5">
           <h1>ממתינים לאישור..</h1>
-          <div className="written flex column">
+          <div className="written z1 flex column">
             <ul>
               {notApprovedLetters.map((letterData, index) => (
                 <li className="note-container relative" key={index}>
