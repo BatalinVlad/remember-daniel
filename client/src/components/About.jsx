@@ -10,7 +10,7 @@ const About = () => {
   };
 
   return (
-    <section className="about">
+    <section className="about z2">
       <div className="flex row-rev" style={{ margin: "50px 0px" }}>
         <div className="description flex column">
           <h2 className="bold">לזכר דניאל ז"ל גיבור ישראל</h2>

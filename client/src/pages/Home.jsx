@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <Login />
-      <div className="HomePage z2">
+      <div className="HomePage">
         {Array.from({ length: STARS_NUMBER }).map((_, i) => (
           <div key={i} className="firefly z1"></div>
         ))}
