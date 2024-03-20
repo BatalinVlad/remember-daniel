@@ -4,7 +4,7 @@ import About from "../components/About";
 import NotesSection from "../components/NotesSection";
 import Login from "../components/Login";
 
-const STARS_NUMBER = 50;
+const STARS_NUMBER = 70;
 
 const Home = () => {
   return (
