@@ -164,7 +164,7 @@ const NotesSection = () => {
         <h2 className="text-center">רשמו עלי</h2>
         <ul className="flex justify-center wrap">
           {submittedNotes.map((letter, index) => (
-            <li className="note-container z2 relative" key={index}>
+            <li className="note-container relative" key={index}>
               <div className="flex">
                 <h3 style={{ marginLeft: "5px" }}>{letter.firstName}</h3>
                 <h3>{letter.lastName}</h3>
