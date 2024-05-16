@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ImagePreview from "./ImagePreview";
 
+// const IMAGES = [];
+
 const About = () => {
   const [viewImage, setViewImage] = useState(false);
   const [imgUrl, setImgUrl] = useState(null);
@@ -27,7 +29,10 @@ const About = () => {
         </div>
       </div>
 
-      <video controls>
+      <video
+        controls
+        poster="https://res.cloudinary.com/dzeycmkct/image/upload/v1715853260/Untitled_vcte1i.png"
+      >
         <source
           src="https://res.cloudinary.com/dzeycmkct/video/upload/v1710690252/VIDEO-2024-03-14-15-55-26_hzhm5y.mp4"
           type="video/mp4"
@@ -49,22 +54,22 @@ const About = () => {
         </div>
         <div className="image">
           <img
-            src="https://res.cloudinary.com/dzeycmkct/image/upload/v1706546154/WhatsApp_Image_2024-01-29_at_16.09.56_qslnws.jpg"
+            src="https://res.cloudinary.com/dzeycmkct/image/upload/v1715852588/WhatsApp_Image_2024-05-06_at_14.05.05_1_yhlcds.jpg"
             alt="Soldier Image 2"
             onClick={() =>
               viewImageHandler(
-                "https://res.cloudinary.com/dzeycmkct/image/upload/v1706546154/WhatsApp_Image_2024-01-29_at_16.09.56_qslnws.jpg"
+                "https://res.cloudinary.com/dzeycmkct/image/upload/v1715852588/WhatsApp_Image_2024-05-06_at_14.05.05_1_yhlcds.jpg"
               )
             }
           />
         </div>
         <div className="image">
           <img
-            src="https://res.cloudinary.com/dzeycmkct/image/upload/v1706546155/WhatsApp_Image_2024-01-29_at_16.09.53_dkn0ao.jpg"
+            src="https://res.cloudinary.com/dzeycmkct/image/upload/v1715852587/WhatsApp_Image_2024-05-06_at_14.05.05_bsufoz.jpg"
             alt="Soldier Image 3"
             onClick={() =>
               viewImageHandler(
-                "https://res.cloudinary.com/dzeycmkct/image/upload/v1706546155/WhatsApp_Image_2024-01-29_at_16.09.53_dkn0ao.jpg"
+                "https://res.cloudinary.com/dzeycmkct/image/upload/v1715852587/WhatsApp_Image_2024-05-06_at_14.05.05_bsufoz.jpg"
               )
             }
           />
@@ -82,11 +87,11 @@ const About = () => {
         </div>
         <div className="image">
           <img
-            src="https://res.cloudinary.com/dzeycmkct/image/upload/v1706546158/WhatsApp_Image_2024-01-29_at_16.09.50_2_sxfrnc.jpg"
+            src="https://res.cloudinary.com/dzeycmkct/image/upload/v1715852586/WhatsApp_Image_2024-05-06_at_14.05.05_2_ms6eyh.jpg"
             alt="Soldier Image 5"
             onClick={() =>
               viewImageHandler(
-                "https://res.cloudinary.com/dzeycmkct/image/upload/v1706546158/WhatsApp_Image_2024-01-29_at_16.09.50_2_sxfrnc.jpg"
+                "https://res.cloudinary.com/dzeycmkct/image/upload/v1715852586/WhatsApp_Image_2024-05-06_at_14.05.05_2_ms6eyh.jpg"
               )
             }
           />
