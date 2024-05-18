@@ -4,7 +4,7 @@ const Navigator = () => {
   return (
     <nav className='main-nav'>
       <ul className='flex justify-evenly'>
-        <li><a href="#notes">רשמו עלי</a></li>
+        <li><a className="leave-note" href="#notes">להשאיר מכתב</a></li>
       </ul>
     </nav>
   );

@@ -1,4 +1,13 @@
-.main-nav{
-    padding: 5px;
-    margin-top: 50px;
+.main-nav {
+  padding: 5px;
+  margin-top: 50px;
+
+  .leave-note {
+    background: #da66277d;
+    padding: 4px 10px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
 }
