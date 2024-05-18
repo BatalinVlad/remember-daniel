@@ -166,8 +166,8 @@ const NotesSection = () => {
           {submittedNotes.map((letter, index) => (
             <li className="note-container relative" key={index}>
               <div className="flex">
-                <h3 style={{ marginLeft: "5px" }}>{letter.firstName}</h3>
-                <h3>{letter.lastName}</h3>
+                <h3 className="bold" style={{ marginLeft: "5px" }}>{letter.firstName}</h3>
+                <h3 className="bold">{letter.lastName}</h3>
               </div>
               <p>{letter.letter}</p>
               {auth.isLoggedIn && (
